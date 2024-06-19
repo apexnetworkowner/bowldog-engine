@@ -1,0 +1,342 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="" type="image/png">
+  <title>Bowldog</title>
+
+  <!-- Meta tags for SEO -->
+  <meta property="og:title" content="Bowldog">
+  <meta property="og:description" content="The gateway to open Restriction at school">
+  <meta property="og:image" content="">
+
+  <!-- Styles and fonts -->
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+  <style>
+    /* Some styling to make it look good */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'IBM Plex Sans';
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure the search input is above the particles */
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.header {
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  height: 42px;
+  width: 42px;
+}
+
+.description {
+  font-size: 16px;
+  color: #afafaf;
+}
+
+.input {
+  width: 130%; /* Adjusted width for a longer search input */
+  background-color: transparent;
+  border: 1.5px gray solid;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  outline: none;
+  height: 50px;
+  transition: color;
+  transition-duration: 100ms;
+}
+
+
+.input:disabled {
+  color: #757575;
+}
+
+.logo {
+  height: 55px;
+  width: 55px;
+  /* padding: 1.5em; */
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 24px #685dff);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  padding: 18px;
+  padding-left: 24px;
+  padding-right: 30px;
+}
+
+.footer a,
+.footer a:visited {
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  text-underline-offset: 2.5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer div {
+  display: flex;
+  gap: 26px;
+}
+        body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #000;
+    }
+    .par {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1; /* Ensure particles are displayed behind the search input */
+    }
+    .particle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        animation: move 5s linear infinite;
+    }
+    @keyframes move {
+        0% {
+            transform: translateY(0) translateX(0) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-100vh) translateX(100vw) scale(0);
+            opacity: 0;
+        }
+    }
+
+    /* Styles for settings tab and button */
+    .settings-tab {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #d40047 ;
+      color: white;
+      padding: 20px;
+      border-radius: 5px;
+      display: none; /* Hide the settings tab by default */
+      z-index: 1000; /* Ensure the settings tab is above other elements */
+    }
+    
+    .settings-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-image: url('https://www.svgrepo.com/show/498932/settings.svg'); /* Replace 'path/to/your/image.png' with the actual path to your image */
+      background-size: cover;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1000; /* Ensure the button is above other elements */
+      transition-duration: 1s;
+    }
+    
+    .settings-button:hover {
+      transform: rotate(360deg);
+    }
+    
+    input[type=file]::file-selector-button {
+      background-color: white;
+      border-radius: 8px;
+      border: none;
+      padding: 5px;
+    }
+     .blank {
+     text-align: center;
+     margin-top: 20px;
+        }
+     .blankbutton {
+      background-color: white;
+      padding: 5px;
+      border-radius: 8px; 
+      border: none;
+      outline: none; 
+      cursor: pointer;
+        }
+      .blankbutton:hover {
+       background-color: lightgrey; 
+        }
+    
+       body {
+       --dark-color: #2d1a52; /* Dark theme */
+       --white-color: #ffffff; /* White theme */
+       --ocean-color: #3498db; /* Ocean theme */
+       --fire-color: #e74c3c; /* Fire theme */
+       --ice-color: #2ecc71; /* Ice theme */
+            transition: background-color 0.5s;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #bbbbbb;
+        }
+       .theme-button {
+       background-color: #ffffff; 
+       border: none;
+       color: black;
+       padding: 10px 20px;
+       margin: 0 5px;
+       cursor: pointer;
+       border-radius: 5px;
+        }
+   
+  </style>
+
+  <!-- Scripts -->
+  <script src="./uv/uv.bundle.js"></script><style type="text/css" id="operaUserStyle">
+  video {
+    filter: -opera-shader(url(data:text/plain;base64,Ly8gaHR0cHM6Ly9naXRodWIuY29tL0dQVU9wZW4tRWZmZWN0cy9GaWRlbGl0eUZYLUNBUwovLyB2MwoKdW5pZm9ybSBzaGFkZXIgaUNodW5rOwp1bmlmb3JtIGZsb2F0MiBpQ2h1bmtTaXplOwp1bmlmb3JtIGZsb2F0MiBpTW91c2U7CnVuaWZvcm0gZmxvYXQgaUFyZ3NbMV07Cgpjb25zdCBmbG9hdCBFUFNJT04gPSAwLjE7CmNvbnN0IGZsb2F0IFZfTUlOID0gMDsKY29uc3QgZmxvYXQgVl9MT1cgPSAwLjI1Owpjb25zdCBmbG9hdCBWX01FRCA9IDAuNTsKY29uc3QgZmxvYXQgVl9ISUdIID0gMC43NTsKY29uc3QgZmxvYXQgVl9NQVggPSAxOwoKY29uc3QgZmxvYXQgVEhSRVNIT0xEX0FSRUEgPSA4MDAgKiA2MDA7CmNvbnN0IGZsb2F0IE1JTl9BUkVBID0gNDAwICogMTAwOwpjb25zdCBmbG9hdCBNSU5fU1RSSVAgPSAyMDsKY29uc3QgZmxvYXQgTUFSR0lOID0gMTsKCmZsb2F0MyBwaXhlbChpbnQgeCwgaW50IHksIGZsb2F0MiB4eSkgewogICAgcmV0dXJuIGlDaHVuay5ldmFsKHh5ICsgZmxvYXQyKHgsIHkpKS5yZ2I7Cn0KCmZsb2F0MyBzaGFycGVuKGZsb2F0MiB4eSkgewogICAgZmxvYXQzIGYgPQogICAgICAgIHBpeGVsKC0xLCAtMSwgeHkpICogIDEgKwogICAgICAgIHBpeGVsKCAwLCAtMSwgeHkpICogLTEgKwogICAgICAgIHBpeGVsKCAxLCAtMSwgeHkpICogIDEgKwoKICAgICAgICBwaXhlbCgtMSwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMCwgMCwgeHkpICogLTEgICsKICAgICAgICBwaXhlbCggMSwgMCwgeHkpICogLTEgICsKCiAgICAgICAgcGl4ZWwoLTEsIDEsIHh5KSAqIDEgICArCiAgICAgICAgcGl4ZWwoIDAsIDEsIHh5KSAqIC0xICArCiAgICAgICAgcGl4ZWwoIDEsIDEsIHh5KSAqIDE7CiAgICByZXR1cm4gZiAvIC0xOwp9CgpmbG9hdDQgUkdYMihmbG9hdDIgeHkpIHsKICAgIGZsb2F0NCBjb2xvciA9IGlDaHVuay5ldmFsKHh5KTsKCiAgICBpZiAoaUNodW5rU2l6ZS54ICogaUNodW5rU2l6ZS55IDwgTUlOX0FSRUEpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKGlDaHVua1NpemUueSA8IE1JTl9TVFJJUCB8fCBpQ2h1bmtTaXplLnggPCBNSU5fU1RSSVApIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgaWYgKHh5LnggPCBNQVJHSU4gfHwgeHkueCA+IChpQ2h1bmtTaXplLnggLSBNQVJHSU4pIHx8CiAgICAgICAgeHkueSA8IE1BUkdJTiB8fCB4eS55ID4gKGlDaHVua1NpemUueSAtIE1BUkdJTikpIHsKICAgICAgICByZXR1cm4gY29sb3I7CiAgICB9CgogICAgcmV0dXJuIGZsb2F0NChzaGFycGVuKHh5KSwgMSk7Cn0KCmZsb2F0IG1pbjMoZmxvYXQgeCwgZmxvYXQgeSwgZmxvYXQgeikgewogICAgcmV0dXJuIG1pbih4LCBtaW4oeSwgeikpOwp9CgpmbG9hdCBtYXgzKGZsb2F0IHgsIGZsb2F0IHksIGZsb2F0IHopIHsKICAgIHJldHVybiBtYXgoeCwgbWF4KHksIHopKTsKfQoKZmxvYXQgcmNwKGZsb2F0IHYpIHsKICAgIHJldHVybiAxIC8gdjsKfQoKZmxvYXQzIFJHWDMoZmxvYXQyIHh5LCBmbG9hdCBzdHJlbmd0aCkgewogICAgZmxvYXQzIGEgPSBwaXhlbCgtMSwgLTEsIHh5KTsKICAgIGZsb2F0MyBiID0gcGl4ZWwoIDAsIC0xLCB4eSk7CiAgICBmbG9hdDMgYyA9IHBpeGVsKCAxLCAtMSwgeHkpOwoKICAgIGZsb2F0MyBkID0gcGl4ZWwoLTEsIDAsIHh5KTsKICAgIGZsb2F0MyBlID0gcGl4ZWwoIDAsIDAsIHh5KTsKICAgIGZsb2F0MyBmID0gcGl4ZWwoIDEsIDAsIHh5KTsKCiAgICBmbG9hdDMgZyA9IHBpeGVsKC0xLCAxLCB4eSk7CiAgICBmbG9hdDMgaCA9IHBpeGVsKCAwLCAxLCB4eSk7CiAgICBmbG9hdDMgaSA9IHBpeGVsKCAxLCAxLCB4eSk7CgogICAgZmxvYXQgbW5SID0gbWluMyhtaW4zKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBtbkcgPSBtaW4zKG1pbjMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG1uQiA9IG1pbjMobWluMyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG1uUjIgPSBtaW4zKG1pbjMobW5SLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG1uRzIgPSBtaW4zKG1pbjMobW5HLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG1uQjIgPSBtaW4zKG1pbjMobW5CLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBtblIgPSBtblIgKyBtblIyOwogICAgbW5HID0gbW5HICsgbW5HMjsKICAgIG1uQiA9IG1uQiArIG1uQjI7CgogICAgZmxvYXQgbXhSID0gbWF4MyhtYXgzKGQuciwgZS5yLCBmLnIpLCBiLnIsIGgucik7CiAgICBmbG9hdCBteEcgPSBtYXgzKG1heDMoZC5nLCBlLmcsIGYuZyksIGIuZywgaC5nKTsKICAgIGZsb2F0IG14QiA9IG1heDMobWF4MyhkLmIsIGUuYiwgZi5iKSwgYi5iLCBoLmIpOwoKICAgIGZsb2F0IG14UjIgPSBtYXgzKG1heDMobXhSLCBhLnIsIGMuciksIGcuciwgaS5yKTsKICAgIGZsb2F0IG14RzIgPSBtYXgzKG1heDMobXhHLCBhLmcsIGMuZyksIGcuZywgaS5nKTsKICAgIGZsb2F0IG14QjIgPSBtYXgzKG1heDMobXhCLCBhLmIsIGMuYiksIGcuYiwgaS5iKTsKCiAgICBteFIgPSBteFIgKyBteFIyOwogICAgbXhHID0gbXhHICsgbXhHMjsKICAgIG14QiA9IG14QiArIG14QjI7CgogICAgZmxvYXQgcmNwTVIgPSByY3AobXhSKTsKICAgIGZsb2F0IHJjcE1HID0gcmNwKG14Ryk7CiAgICBmbG9hdCByY3BNQiA9IHJjcChteEIpOwoKICAgIGZsb2F0IGFtcFIgPSBzYXR1cmF0ZShtaW4obW5SLCAyIC0gbXhSKSAqIHJjcE1SKTsKICAgIGZsb2F0IGFtcEcgPSBzYXR1cmF0ZShtaW4obW5HLCAyIC0gbXhHKSAqIHJjcE1HKTsKICAgIGZsb2F0IGFtcEIgPSBzYXR1cmF0ZShtaW4obW5CLCAyIC0gbXhCKSAqIHJjcE1CKTsKCiAgICBhbXBSID0gc3FydChhbXBSKTsKICAgIGFtcEcgPSBzcXJ0KGFtcEcpOwogICAgYW1wQiA9IHNxcnQoYW1wQik7CgogICAgZmxvYXQgcGVhayA9IC1yY3AobWl4KDgsIDUsIHN0cmVuZ3RoKSk7CgogICAgZmxvYXQgd1IgPSBhbXBSICogcGVhazsKICAgIGZsb2F0IHdHID0gYW1wRyAqIHBlYWs7CiAgICBmbG9hdCB3QiA9IGFtcEIgKiBwZWFrOwoKICAgIGZsb2F0IHJjcFdlaWdodFIgPSByY3AoMSArIDQgKiB3Uik7CiAgICBmbG9hdCByY3BXZWlnaHRHID0gcmNwKDEgKyA0ICogd0cpOwogICAgZmxvYXQgcmNwV2VpZ2h0QiA9IHJjcCgxICsgNCAqIHdCKTsKCiAgICByZXR1cm4gZmxvYXQzKAogICAgICAgIHNhdHVyYXRlKChiLnIgKiB3UiArIGQuciAqIHdSICsgZi5yICogd1IgKyBoLnIgKiB3UiArIGUucikgKiByY3BXZWlnaHRSKSwKICAgICAgICBzYXR1cmF0ZSgoYi5nICogd0cgKyBkLmcgKiB3RyArIGYuZyAqIHdHICsgaC5nICogd0cgKyBlLmcpICogcmNwV2VpZ2h0RyksCiAgICAgICAgc2F0dXJhdGUoKGIuYiAqIHdCICsgZC5iICogd0IgKyBmLmIgKiB3QiArIGguYiAqIHdCICsgZS5iKSAqIHJjcFdlaWdodEIpKTsKfQoKCmZsb2F0NCBtYWluKGZsb2F0MiB4eSkgewoKICAgIGZsb2F0NCBvcmlnaW5hbENvbG9yID0gaUNodW5rLmV2YWwoeHkpOwogICAgaWYgKG9yaWdpbmFsQ29sb3IuYSA8IDEpIHsKICAgICAgICByZXR1cm4gaUNodW5rLmV2YWwoeHkpOwogICAgfQoKICAgIGZsb2F0IGludGVuc2l0eSA9IGlBcmdzWzBdOwogICAgZmxvYXQgc3RyZW5ndGggPSAwOwogICAgZmxvYXQzIGNvbG9yOwoKICAgIGlmIChpbnRlbnNpdHkgPCBWX01JTiArIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMC4xMDsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfTE9XIC0gRVBTSU9OICYmIGludGVuc2l0eSA8IFZfTE9XICsgRVBTSU9OKSB7CiAgICAgICAgc3RyZW5ndGggPSAwLjMzOwogICAgICAgIGNvbG9yID0gUkdYMyh4eSwgc3RyZW5ndGgpOwoKICAgIH0gZWxzZSBpZiAoaW50ZW5zaXR5ID4gVl9NRUQgLSBFUFNJT04gJiYgaW50ZW5zaXR5IDwgVl9NRUQgKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuNTsKICAgICAgICBjb2xvciA9IFJHWDMoeHksIHN0cmVuZ3RoKTsKCiAgICB9IGVsc2UgaWYgKGludGVuc2l0eSA+IFZfSElHSCAtIEVQU0lPTiAmJiBpbnRlbnNpdHkgPCBWX0hJR0ggKyBFUFNJT04pIHsKICAgICAgICBzdHJlbmd0aCA9IDAuOTk7CiAgICAgICAgY29sb3IgPSBSR1gzKHh5LCBzdHJlbmd0aCk7CgogICAgfSBlbHNlIGlmIChpbnRlbnNpdHkgPiBWX01BWCAtIEVQU0lPTikgewogICAgICAgIHN0cmVuZ3RoID0gMTsKICAgICAgICBjb2xvciA9IFJHWDIoeHkpLnJnYjsKICAgIH0KCiAgICByZXR1cm4gZmxvYXQ0KGNvbG9yLCBvcmlnaW5hbENvbG9yLmEpOwp9) -opera-args(0.50 calc(env(-opera-gx-accent-color-r)/255) calc(env(-opera-gx-accent-color-g)/255) calc(env(-opera-gx-accent-color-b)/255)));
+  }
+</style>
+  <script src="./uv/uv.config.js"></script>
+  <script src="./assets/register-sw.js"></script>
+
+<style type="text/css">:root [href^="//mage98rquewz.com/"], :root [href^="//x4pollyxxpush.com/"], :root zeus-ad, :root span[id^="ezoic-pub-ad-placeholder-"], :root ins.adsbygoogle[data-ad-slot], :root guj-ad, :root gpt-ad, :root div[id^="zergnet-widget"], :root div[id^="vuukle-ad-"], :root div[id^="taboola-stream-"], :root div[id^="sticky_ad_"], :root div[id^="pa_sticky_ad_box_middle_"], :root div[id^="optidigital-adslot"], :root div[id^="gpt_ad_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="dfp-ad-"], :root div[id^="crt-"][style], :root div[id^="adspot-"], :root div[id^="adrotate_widgets-"], :root ps-connatix-module, :root div[id^="ad_position_"], :root div[id^="ad-div-"], :root div[id*="ScriptRoot"], :root div[id*="MarketGid"], :root div[data-native_ad], :root div[data-native-ad], :root div[data-id-advertdfpconf], :root hl-adsense, :root div[data-contentexchange-widget], :root div[data-alias="300x250 Ad 2"], :root div[data-adzone], :root div[data-adunit-path], :root div[data-adname], :root div[data-ad-wrapper], :root div[data-ad-placeholder], :root div[class^="native-ad-"], :root div[data-dfp-id], :root div[class^="kiwi-ad-wrapper"], :root div[aria-label="Ads"], :root display-ads, :root display-ad-component, :root bottomadblock, :root atf-ad-slot, :root aside[id^="adrotate_widgets-"], :root ark-top-ad, :root amp-fx-flying-carpet, :root amp-embed[type="taboola"], :root amp-connatix-player, :root amp-ad-custom, :root amp-ad, :root div[id^="google_dfp_"], :root ad-slot, :root ad-shield-ads, :root a[style="width:100%;height:100%;z-index:10000000000000000;position:absolute;top:0;left:0;"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href^="https://www.onlineusershielder.com/"], :root a[href^="https://www.nudeidols.com/cams/"], :root a[href^="https://financeads.net/tc.php?"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://www.kingsoffetish.com/tour?partner_id="], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[href^="https://www.highperformancecpmgate.com/"], :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href^="https://lnkxt.bannerator.com/"], :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root a[href^="https://www.friendlyduck.com/AF_"], :root a[href^="https://www.financeads.net/tc.php?"], :root [href^="https://www.herbanomic.com/"] > img, :root a[href^="https://maymooth-stopic.com/"], :root a[href^="https://www.dql2clk.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="https://www.dating-finder.com/signup/?ai_d="], :root a[href^="https://explore-site.com/"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root a[href^="https://www.adxsrve.com/"], :root [data-template-type="nativead"], :root a[href^="https://www.endorico.com/Smartlink/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://voluum.prom-xcams.com/"], :root a[href^="https://twinrdsrv.com/"], :root a[href^="https://trk.nfl-online-streams.club/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://track.ultravpn.com/"], :root a[href^="https://track.afcpatrk.com/"], :root a[href^="https://track.1234sd123.com/"], :root a[href^="https://torguard.net/aff.php"] > img, :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://tatrck.com/"], :root a[href^="https://click.candyoffers.com/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://t.aslnk.link/"], :root a[href^="https://t.ajrkm3.com/"], :root a[href^="https://t.adating.link/"], :root a[href^="https://safesurfingtoday.com/"][href*="?skip="], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://t.acam.link/"], :root a[href*="//daichoho.com/"], :root a[href^="https://syndication.optimizesrv.com/"], :root a[href^="https://go.trackitalltheway.com/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://syndication.dynsrvtbg.com/"], :root div[data-alias="300x250 Ad 1"], :root a[href^="https://syndicate.contentsserved.com/"], :root a[href^="https://svb-analytics.trackerrr.com/"], :root a[href^="https://streamate.com/landing/click/"], :root a[href^="https://ad.doubleclick.net/"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="https://slkmis.com/"], :root a[href^="https://s.zlink3.com/"], :root a[href^="https://www.mrskin.com/account/"], :root a[href^="https://s.optzsrv.com/"], :root a[href^="https://random-affiliate.atimaze.com/"], :root a[href^="https://quotationfirearmrevision.com/"], :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href^="https://ak.oalsauwy.net/"], :root a[href^="https://softwa.cfd/"], :root a[href^="https://play1ad.shop/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="https://www.dating-finder.com/?ai_d="], :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root app-ad, :root a[href^="https://postback1win.com/"], :root a[href^="https://a.adtng.com/"], :root a[href^="https://playnano.online/offerwalls/?ref="], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root a[href^="https://pb-track.com/"], :root a[href^="https://pb-front.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root a[href^="https://ngineet.cfd/"], :root a[href^="https://upsups.click/"], :root a[href^="https://ndt5.net/"], :root a[href^="http://eighteenderived.com/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root a[href^="https://www.sugarinstant.com/?partner_id="], :root a[href^="https://m.do.co/c/"] > img, :root [data-ad-name], :root a[href^="https://loboclick.com/"], :root .nya-slot[style], :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="https://lobimax.com/"], :root a[href^="https://lead1.pl/"], :root a[href^="https://landing1.brazzersnetwork.com"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://join.virtuallust3d.com/"], :root a[href^="https://kiksajex.com/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://www.mypornstarcams.com/landing/click/"], :root a[href^="https://snowdayonline.xyz/"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://jaxofuna.com/"], :root a[href^="https://itubego.com/video-downloader/?affid="], :root a[href^="https://italarizege.xyz/"], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href^="https://hot-growngames.life/"], :root a[href^="https://golinks.work/"], :root a[href^="https://go.xxxvjmp.com/"], :root a[href^="https://s.deltraff.com/"], :root a[href^="https://zirdough.net/"], :root [class^="tile-picker__CitrusBannerContainer-sc-"], :root a[href^="https://go.xxxiijmp.com"], :root a[href^="https://go.xtbaffiliates.com/"], :root .OUTBRAIN[data-widget-id^="FMS_REELD_"], :root [data-role="tile-ads-module"], :root a[href^="https://go.xlviirdr.com"], :root a[href^="https://go.xlviiirdr.com"], :root a[href^="https://ismlks.com/"], :root [href^="https://www.mypillow.com/"] > img, :root a[href^="https://go.xlirdr.com"], :root [data-css-class="dfp-inarticle"], :root a[href^="https://l.hyenadata.com/"], :root a[href^="https://go.tmrjmp.com"], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://lijavaxa.com/"], :root a[href^="https://go.goaserv.com/"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://go.dmzjmp.com"], :root div[class^="Display_displayAd"], :root a[href^="https://www.bang.com/?aff="], :root #mgb-container > #mgb, :root a[href^="https://go.admjmp.com"], :root div[id^="div-gpt-"], :root a[href^="https://gml-grp.com/"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a[href^="https://gamingadlt.com/?offer="], :root a[href^="https://www.adskeeper.com"], :root [href^="https://www.reimageplus.com/"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root [href^="https://clicks.affstrack.com/"] > img, :root a[href^="https://ak.hauchiwu.com/"], :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href^="https://engine.blueistheneworanges.com/"], :root a[href^="https://eergortu.net/"], :root a[href^="https://dl-protect.net/"], :root a[href^="https://rixofa.com/"], :root a[href^="https://disobediencecalculatormaiden.com/"], :root a[href^="https://datingoffers30.info/"], :root a[href*=".foxqck.com/"], :root a[href^="https://ctosrd.com/"], :root a[href^="https://clixtrac.com/"], :root [href^="https://noqreport.com/"] > img, :root a[href^="https://clicks.pipaffiliates.com/"], :root a[href^="https://datewhisper.life/"], :root a[href^="https://get-link.xyz/"], :root a[href^="https://click.linksynergy.com/fs-bin/"] > img, :root a[href^="https://combodef.com/"], :root AD-TRIPLE-BOX, :root a[href^="https://click.hoolig.app/"], :root a[href^="https://track.totalav.com/"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href^="https://porntubemate.com/"], :root a[href^="https://clickadilla.com/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href^="https://go.xlvirdr.com"], :root a[href^="http://www.iyalc.com/"], :root a[href^="https://claring-loccelkin.com/"], :root a[href^="https://s.ma3ion.com/"], :root a[href^="https://cams.imagetwist.com/in/?track="], :root a[href^="https://bongacams2.com/track?"], :root a[href^="https://t.ajrkm1.com/"], :root [href="https://masstortfinancing.com"] img, :root a[href^="https://bongacams10.com/track?"], :root a[href*=".g2afse.com/"], :root a[href^="https://bodelen.com/"], :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root a[href^="https://banners.livepartners.com/"], :root a[href^="http://revolvemockerycopper.com/"], :root a[href^="https://awptjmp.com/"], :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://intenseaffiliates.com/redirect/"], :root a[href^="https://aweptjmp.com/"], :root [class^="s2nPlayer"], :root a[href^="https://chaturbate.jjgirls.com/?track="], :root a[href^="https://ausoafab.net/"], :root a[href^="https://activate-game.com/"], :root .scroll-fixable.rail-right > .deals-rail, :root [data-wpas-zoneid], :root a[href^="https://a2.adform.net/"], :root a[href^="https://auesk.cfd/"], :root a[href^="https://ak.psaltauw.net/"], :root a[href^="https://adclick.g.doubleclick.net/"], :root div[id^="ad-position-"], :root a[href^="https://leg.xyz/?track="], :root a[href^="https://www.toprevenuegate.com/"], :root a[href^="https://bc.game/"], :root a[href^="https://a.bestcontentoperation.top/"], :root a[href^="https://adultfriendfinder.com/go/"], :root a[href^="https://ads.planetwin365affiliate.com/"], :root a[href^="https://ads.leovegas.com/"], :root a[href^="https://a.candyai.love/"], :root [data-m-ad-id], :root a[href^="https://a-ads.com/"], :root div[id^="rc-widget-"], :root a[href^="http://eslp34af.click/"], :root a[href^="https://turnstileunavailablesite.com/"], :root a[href^="https://chaturbate.com/in/?"], :root [href^="https://freecourseweb.com/"] > .sitefriend, :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href*="&maxads="], :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="https://1betandgonow.com/"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href^="http://www.mrskin.com/tour"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="https://getvideoz.click/"], :root a[href^="http://troopsassistedstupidity.com/"], :root a[href^="http://trk.globwo.online/"], :root a-ad, :root a[href^="https://offhandpump.com/"], :root a[href^="http://stickingrepute.com/"], :root #slashboxes > .deals-rail, :root a[href^="http://premonitioninventdisagree.com/"], :root a[href^="http://naggingirresponsible.com/"], :root a[href^="https://in.rabbtrk.com/"], :root div[data-ad-targeting], :root a[href^="https://hotplaystime.life/"], :root a[href^="http://www.h4trck.com/"], :root a[href^="https://81ac.xyz/"], :root a[href^="http://guestblackmail.com/"], :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root a[href^="https://ad.kubiccomps.icu/"], :root [href^="https://www.mypatriotsupply.com/"] > img, :root a[href^="https://trk.softonixs.xyz/"], :root a[href^="https://sexynearme.com/"], :root a[href^="https://myclick-2.com/"], :root a[href^="http://dragnag.com/"], :root [id^="div-gpt-ad"], :root .ob_container .item-container-obpd, :root div[id^="yandex_ad"], :root a[href^="https://www8.smartadserver.com/"], :root a[href^="https://pb-imc.com/"], :root a[href^="http://deskfrontfreely.com/"], :root a[href^="https://track.adform.net/"], :root a[href^="http://avthelkp.net/"], :root a[href^="https://a.medfoodhome.com/"], :root a[href^="https://engine.flixtrial.com/"], :root [data-type="ad-vertical"], :root a[href^="http://annulmentequitycereals.com/"], :root a[href^="//startgaming.net/tienda/" i], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="//s.st1net.com/splash.php"], :root a[href^="https://join.virtualtaboo.com/track/"], :root [id^="ad_sky"], :root a[href^="http://coefficienttolerategravel.com/"], :root a[href^="https://a.medfoodsafety.com/"], :root a[href^="//go.eabids.com/"], :root a[href^=" https://www.friendlyduck.com/AF_"], :root a[href*="/jump/next.php?r="], :root [href^="https://ilovemyfreedoms.com/landing-"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root .\[\&_\.gdprAdTransparencyCogWheelButton\]\:\!pjra-z-\[5\], :root [href^="http://clicks.totemcash.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root [data-d-ad-id], :root a[href*=".engine.adglare.net/"], :root [href^="https://www.profitablegatecpm.com/"], :root div[id^="lazyad-"], :root a[href^="http://com-1.pro/"], :root a[href*=".cfm?domain="][href*="&fp="], :root [data-dynamic-ads], :root a[href^="https://xbet-4.com/"], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root [data-ad-width], :root [data-block-type="ad"], :root [href^="https://join.playboyplus.com/track/"], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root a[href^="https://ab.advertiserurl.com/aff/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root a[href^="https://trk.sportsflix4k.club/"], :root a[href^="http://dragfault.com/"], :root [href^="https://cpa.10kfreesilver.com/"], :root a[href^="https://a.bestcontentfood.top/"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root a[data-href^="http://ads.trafficjunky.net/"], :root a[href^="https://go.xlivrdr.com"], :root [onclick^="location.href='https://1337x.vpnonly.site/"], :root [name^="google_ads_iframe"], :root [id^="section-ad-banner"], :root [data-advadstrackid], :root a[href^="http://muzzlematrix.com/"], :root [href^="https://zone.gotrackier.com/"], :root [href^="https://www.restoro.com/"], :root a[href^="https://bngpt.com/"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="http://adultfriendfinder.com/go/"], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root a[href^="https://tour.mrskin.com/"], :root citrus-ad-wrapper, :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root a[href^="https://go.grinsbest.com/"], :root a[href^="https://vo2.qrlsx.com/"], :root [href^="https://www.avantlink.com/click.php"] img, :root a[href^="https://losingoldfry.com/"], :root [href^="https://routewebtk.com/"], :root a[href^="https://t.ajump1.com/"], :root span[data-ez-ph-id], :root [href^="https://track.aftrk1.com/"], :root div[id^="adngin-"], :root [data-rc-widget], :root a[href^="https://go.hpyjmp.com"], :root [href^="https://mystore.com/"] > img, :root div[id^="div-ads-"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root [href^="https://join.girlsoutwest.com/"], :root [href^="https://join3.bannedsextapes.com"], :root a[href^="https://go.xxxijmp.com"], :root [href^="https://istlnkcl.com/"], :root div[data-adunit], :root app-large-ad, :root [href^="https://turtlebids.irauctions.com/"] img, :root [href^="https://wct.link/click?"], :root [href^="https://go.xlrdr.com"], :root a[href^="https://tm-offers.gamingadult.com/"], :root [href^="https://charmingdatings.life/"], :root [href^="https://glersakr.com/"], :root [href^="https://v.investologic.co.uk/"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root [id^="ad-wrap-"], :root a[href*="//jjgirls.com/sex/Chaturbate"], :root [data-id^="div-gpt-ad"], :root a[href^="https://tracker.loropartners.com/"], :root [href^="https://awbbjmp.com/"], :root a[href*=".adsrv.eacdn.com/"], :root [href^="https://antiagingbed.com/discount/"] > img, :root [href^="https://www.brighteonstore.com/products/"] img, :root a[href^="https://bngprm.com/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://go.bushheel.com/"], :root a[href^="https://ctjdwm.com/"], :root a[href^="https://camfapr.com/landing/click/"], :root [href="//sexcams.plus/"], :root [href^="http://www.mypillow.com/"] > img, :root [href^="https://www.targetingpartner.com/"], :root div[class^="Adstyled__AdWrapper-"], :root a[href^="https://startgaming.net/tienda/" i], :root .section-subheader > .section-hotel-prices-header, :root [href^="https://www.hostg.xyz/"] > img, :root #kt_player > a[target="_blank"], :root a[href^="http://bongacams.com/track?"], :root [href^="http://mypillow.com/"] > img, :root [href="https://ourgoldguy.com/contact/"] img, :root [href="https://www.masstortfinancing.com/"] > img, :root a[href^="https://go.rmhfrtnd.com/"], :root [href="https://jdrucker.com/gold"] > img, :root [href^="https://ad.admitad.com/"], :root [href^="https://mypillow.com/"] > img, :root [data-testid="ad_testID"], :root a[href^="http://handgripvegetationhols.com/"], :root [class^="amp-ad-"], :root a[href^="http://tc.tradetracker.net/"] > img, :root [data-ez-name], :root a[href^="https://black77854.com/"], :root [data-revive-zoneid] > iframe, :root [data-testid="adBanner-wrapper"], :root [href^="https://mylead.global/stl/"] > img, :root [href^="https://mypatriotsupply.com/"] > img, :root a[href^="https://witnessjacket.com/"], :root [data-mobile-ad-id], :root a[href^="https://fc.lc/ref/"], :root [data-adshim], :root topadblock, :root a[href^="//s.zlinkd.com/"], :root a[href^="https://bs.serving-sys.com"], :root a[href^="https://go.cmtaffiliates.com/"], :root [href^="https://optimizedelite.com/"] > img, :root [data-name="adaptiveConstructorAd"], :root a[href^="http://partners.etoro.com/"], :root [href^="https://goldcometals.com/clk.trk"], :root [data-desktop-ad-id], :root [href^="https://www.cloudways.com/en/?id"], :root a[href^="https://www.liquidfire.mobi/"], :root .grid > .container > #aside-promotion, :root DFP-AD, :root [id^="ad_slider"], :root [data-adbridg-ad-class], :root a[href^="https://linkboss.shop/"], :root [data-adblockkey], :root [onclick*="content.ad/"], :root [data-ad-manager-id], :root AMP-AD, :root [data-ad-cls], :root a[href^="https://6-partner.com/"], :root [href^="https://affiliate.fastcomet.com/"] > img, :root a[href^="https://go.mnaspm.com/"], :root [class^="adDisplay-module"], :root AD-SLOT, :root #kt_player > div[style="position: absolute; inset: 0px; z-index: 170;"], :root [data-freestar-ad][id], :root a[href^="https://go.xxxjmp.com"], :root #leader-companion > a[href], :root a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"], :root [data-ad-module], :root app-advertisement, :root a[href^="https://getmatchedlocally.com/"], :root a[href^="https://clickins.slixa.com/"], :root [class^="div-gpt-ad"], :root a[href^="https://traffdaq.com/"], :root a[href^="https://cam4com.go2cloud.org/"], :root a[href^="http://li.blogtrottr.com/click?"], :root .ob_dual_right > .ob_ads_header ~ .odb_div { display: none !important; }</style></head>
+
+<body style="background-color: var(--dark-color);">
+  <div class="container">
+    <h1 class="header">
+      Bowldog Engine
+    </h1>
+    <p class="description">Welcome to Bowldog Engine! </p>
+    <input type="text" class="input" placeholder="Enter a search query or URL">
+  </div>
+  
+<div class="par">
+<div class="particle" style="top: 7.8881vh; left: 98.6962vw; animation-duration: 4.18247s;"></div><div class="particle" style="top: 17.6022vh; left: 17.8186vw; animation-duration: 3.82129s;"></div><div class="particle" style="top: 72.1208vh; left: 79.833vw; animation-duration: 5.82166s;"></div><div class="particle" style="top: 17.045vh; left: 92.1949vw; animation-duration: 3.8818s;"></div><div class="particle" style="top: 35.7167vh; left: 12.502vw; animation-duration: 1.2532s;"></div><div class="particle" style="top: 5.84768vh; left: 68.4717vw; animation-duration: 3.03324s;"></div><div class="particle" style="top: 38.7023vh; left: 40.0011vw; animation-duration: 3.84368s;"></div><div class="particle" style="top: 88.824vh; left: 16.6996vw; animation-duration: 2.74419s;"></div><div class="particle" style="top: 55.1217vh; left: 18.4818vw; animation-duration: 2.59188s;"></div><div class="particle" style="top: 79.4648vh; left: 35.224vw; animation-duration: 3.11247s;"></div><div class="particle" style="top: 66.501vh; left: 94.4658vw; animation-duration: 3.41157s;"></div><div class="particle" style="top: 25.3002vh; left: 38.6076vw; animation-duration: 2.12933s;"></div><div class="particle" style="top: 8.52824vh; left: 14.811vw; animation-duration: 3.20452s;"></div><div class="particle" style="top: 22.8151vh; left: 77.3893vw; animation-duration: 2.60708s;"></div><div class="particle" style="top: 71.2525vh; left: 82.9327vw; animation-duration: 5.50134s;"></div><div class="particle" style="top: 96.007vh; left: 66.0909vw; animation-duration: 1.15157s;"></div><div class="particle" style="top: 83.0201vh; left: 39.9054vw; animation-duration: 1.66024s;"></div><div class="particle" style="top: 74.5343vh; left: 83.4586vw; animation-duration: 2.61079s;"></div><div class="particle" style="top: 81.3725vh; left: 43.1143vw; animation-duration: 4.25309s;"></div><div class="particle" style="top: 95.609vh; left: 69.0667vw; animation-duration: 5.02135s;"></div><div class="particle" style="top: 60.6048vh; left: 30.4802vw; animation-duration: 3.18213s;"></div><div class="particle" style="top: 62.9408vh; left: 28.4472vw; animation-duration: 5.06798s;"></div><div class="particle" style="top: 15.2994vh; left: 55.6269vw; animation-duration: 3.88593s;"></div><div class="particle" style="top: 69.7028vh; left: 71.1815vw; animation-duration: 5.33577s;"></div><div class="particle" style="top: 5.5529vh; left: 11.1354vw; animation-duration: 3.13143s;"></div><div class="particle" style="top: 27.5439vh; left: 40.063vw; animation-duration: 2.33203s;"></div><div class="particle" style="top: 72.5251vh; left: 71.1841vw; animation-duration: 5.9187s;"></div><div class="particle" style="top: 67.1648vh; left: 21.32vw; animation-duration: 5.81579s;"></div><div class="particle" style="top: 45.118vh; left: 43.7487vw; animation-duration: 5.61143s;"></div><div class="particle" style="top: 22.8637vh; left: 8.74902vw; animation-duration: 5.66165s;"></div><div class="particle" style="top: 33.4081vh; left: 87.3389vw; animation-duration: 2.79799s;"></div><div class="particle" style="top: 43.1243vh; left: 92.8821vw; animation-duration: 1.87552s;"></div><div class="particle" style="top: 1.42244vh; left: 28.9208vw; animation-duration: 5.31488s;"></div><div class="particle" style="top: 89.9205vh; left: 34.9913vw; animation-duration: 5.86563s;"></div><div class="particle" style="top: 40.9194vh; left: 77.6813vw; animation-duration: 1.84974s;"></div><div class="particle" style="top: 68.1647vh; left: 51.9797vw; animation-duration: 2.40551s;"></div><div class="particle" style="top: 55.1187vh; left: 90.5944vw; animation-duration: 5.03245s;"></div><div class="particle" style="top: 89.8293vh; left: 40.5177vw; animation-duration: 4.90853s;"></div><div class="particle" style="top: 64.5015vh; left: 52.4064vw; animation-duration: 4.09079s;"></div><div class="particle" style="top: 75.4283vh; left: 31.8567vw; animation-duration: 2.12927s;"></div><div class="particle" style="top: 96.5949vh; left: 74.2081vw; animation-duration: 5.96904s;"></div><div class="particle" style="top: 2.11414vh; left: 65.0269vw; animation-duration: 5.22415s;"></div><div class="particle" style="top: 60.5724vh; left: 88.4718vw; animation-duration: 4.67192s;"></div><div class="particle" style="top: 29.9844vh; left: 27.786vw; animation-duration: 3.88114s;"></div><div class="particle" style="top: 4.44096vh; left: 34.4668vw; animation-duration: 2.17547s;"></div><div class="particle" style="top: 42.8524vh; left: 76.654vw; animation-duration: 4.1396s;"></div><div class="particle" style="top: 57.2474vh; left: 42.1441vw; animation-duration: 1.68334s;"></div><div class="particle" style="top: 99.3373vh; left: 20.9339vw; animation-duration: 1.63598s;"></div><div class="particle" style="top: 53.2615vh; left: 22.8596vw; animation-duration: 1.97806s;"></div><div class="particle" style="top: 54.5588vh; left: 62.2375vw; animation-duration: 2.13485s;"></div><div class="particle" style="top: 75.8909vh; left: 8.75842vw; animation-duration: 2.31079s;"></div><div class="particle" style="top: 73.4537vh; left: 68.7366vw; animation-duration: 4.48933s;"></div><div class="particle" style="top: 91.3802vh; left: 14.6507vw; animation-duration: 3.90219s;"></div><div class="particle" style="top: 67.7758vh; left: 98.0371vw; animation-duration: 1.02459s;"></div><div class="particle" style="top: 69.3085vh; left: 6.89678vw; animation-duration: 5.30681s;"></div><div class="particle" style="top: 40.2064vh; left: 15.5328vw; animation-duration: 2.04909s;"></div><div class="particle" style="top: 92.5471vh; left: 46.7584vw; animation-duration: 2.29793s;"></div><div class="particle" style="top: 3.01407vh; left: 66.6748vw; animation-duration: 2.67952s;"></div><div class="particle" style="top: 35.4388vh; left: 22.6425vw; animation-duration: 4.60802s;"></div><div class="particle" style="top: 18.7878vh; left: 5.90248vw; animation-duration: 3.15539s;"></div><div class="particle" style="top: 74.478vh; left: 67.5685vw; animation-duration: 3.03695s;"></div><div class="particle" style="top: 35.9599vh; left: 68.8428vw; animation-duration: 4.31292s;"></div><div class="particle" style="top: 21.2114vh; left: 96.4043vw; animation-duration: 2.8479s;"></div><div class="particle" style="top: 18.1853vh; left: 51.5734vw; animation-duration: 1.30977s;"></div><div class="particle" style="top: 79.862vh; left: 63.0131vw; animation-duration: 1.65789s;"></div><div class="particle" style="top: 0.53063vh; left: 39.9858vw; animation-duration: 3.59882s;"></div><div class="particle" style="top: 76.2157vh; left: 0.134436vw; animation-duration: 2.48054s;"></div><div class="particle" style="top: 43.2935vh; left: 4.54144vw; animation-duration: 3.21391s;"></div><div class="particle" style="top: 32.43vh; left: 36.5388vw; animation-duration: 3.83751s;"></div><div class="particle" style="top: 83.9018vh; left: 1.6847vw; animation-duration: 3.17877s;"></div><div class="particle" style="top: 19.0099vh; left: 63.6896vw; animation-duration: 4.90963s;"></div><div class="particle" style="top: 46.1397vh; left: 30.7981vw; animation-duration: 5.10639s;"></div><div class="particle" style="top: 41.4774vh; left: 14.1088vw; animation-duration: 2.35898s;"></div><div class="particle" style="top: 72.9545vh; left: 38.751vw; animation-duration: 3.10613s;"></div><div class="particle" style="top: 41.7719vh; left: 18.8851vw; animation-duration: 3.29086s;"></div><div class="particle" style="top: 28.9086vh; left: 71.2578vw; animation-duration: 3.96457s;"></div><div class="particle" style="top: 44.5337vh; left: 36.671vw; animation-duration: 3.68081s;"></div><div class="particle" style="top: 24.7986vh; left: 86.6822vw; animation-duration: 3.0308s;"></div><div class="particle" style="top: 92.9377vh; left: 57.8729vw; animation-duration: 5.4691s;"></div><div class="particle" style="top: 50.1358vh; left: 59.0051vw; animation-duration: 2.71844s;"></div><div class="particle" style="top: 6.87296vh; left: 38.9779vw; animation-duration: 4.7864s;"></div><div class="particle" style="top: 20.6254vh; left: 21.6935vw; animation-duration: 5.64474s;"></div><div class="particle" style="top: 54.0553vh; left: 92.8536vw; animation-duration: 2.40914s;"></div><div class="particle" style="top: 18.8039vh; left: 55.4001vw; animation-duration: 4.36355s;"></div><div class="particle" style="top: 27.9357vh; left: 15.3096vw; animation-duration: 4.82017s;"></div><div class="particle" style="top: 92.1589vh; left: 59.6354vw; animation-duration: 4.93395s;"></div><div class="particle" style="top: 71.8693vh; left: 88.5773vw; animation-duration: 2.2434s;"></div><div class="particle" style="top: 40.3474vh; left: 35.5207vw; animation-duration: 1.02647s;"></div><div class="particle" style="top: 34.9736vh; left: 60.5545vw; animation-duration: 1.46727s;"></div><div class="particle" style="top: 5.59159vh; left: 49.1703vw; animation-duration: 2.67612s;"></div><div class="particle" style="top: 50.7489vh; left: 63.2265vw; animation-duration: 2.56106s;"></div><div class="particle" style="top: 84.1567vh; left: 11.6764vw; animation-duration: 2.30932s;"></div><div class="particle" style="top: 85.2431vh; left: 89.1884vw; animation-duration: 3.27518s;"></div><div class="particle" style="top: 56.5661vh; left: 30.217vw; animation-duration: 3.79148s;"></div><div class="particle" style="top: 28.6463vh; left: 4.13197vw; animation-duration: 3.86719s;"></div><div class="particle" style="top: 39.249vh; left: 64.2099vw; animation-duration: 2.84555s;"></div><div class="particle" style="top: 26.9122vh; left: 67.2875vw; animation-duration: 2.46473s;"></div><div class="particle" style="top: 93.0661vh; left: 72.0136vw; animation-duration: 2.73951s;"></div><div class="particle" style="top: 98.8261vh; left: 91.5356vw; animation-duration: 1.10242s;"></div><div class="particle" style="top: 54.876vh; left: 61.8878vw; animation-duration: 3.37476s;"></div></div>
+
+  <!-- Settings tab -->
+  <div class="settings-tab" id="settingsTab">
+    <h2 style="background-color:transparent;">Site Settings</h2>
+    <label style="background-color: transparent" for="siteName">Site Name:</label>
+    <input style="background-color: white; padding: 5px; border-radius: 4px; border: none;" type="text" id="siteName" placeholder="Enter new site name"><br><br>
+    <label style="background-color: transparent" for="favicon">Favicon:</label>
+    <input style="border-radius: 5px; background-color: transparent; padding: 5px;" type="file" id="favicon"><br><br>
+    <button style="background-color: white; padding: 5px; border-radius: 8px; border: none;" onclick="saveSettings()">Save</button>
+    <button style="background-color: white; padding: 5px; border-radius: 8px; border: none;" onclick="closeSettings()">Close</button>
+    <div style="background-color: transparent;" class="blank">
+    <button style="background-color: white; padding: 5px border-radius: 8px; border: none;" class="blankbutton" onclick="aboutblank()">Launch About:Blank</button>
+    </div>
+    <div style="background-color: transparent;" class="panic">
+    <button onclick="panicButton()" style="background-color: white; padding: 5px 20px; border: none; border-radius: 5px; color: black; font-weight: none; cursor: pointer;">
+            Panic Button
+       </button>
+    </div>
+    <h3 style="background-color: transparent;">
+      Themes
+    </h3>
+    <div style="background-color: transparent;" class="Themes">
+        <button class="theme-button" onclick="changeTheme('--dark-color')">BDG Theme</button>
+        <button class="theme-button" onclick="changeTheme('--white-color')">White Theme</button>
+        <button class="theme-button" onclick="changeTheme('--ocean-color')">sky blue Theme</button>
+        <button class="theme-button" onclick="changeTheme('--fire-color')">fire red theme</button>
+        <button class="theme-button" onclick="changeTheme('--ice-color')">lime green theme</button>
+        <button class="theme-button" onclick="resetTheme()">Default Theme</button>
+    </div>
+  </div>
+
+  <!-- Button to open settings -->
+  <div class="settings-button" onclick="openSettings()"></div>
+
+  <script src="./assets/script.js" defer=""></script>
+  <script>
+    
+    function openSettings() {
+      document.getElementById('settingsTab').style.display = 'block';
+    }
+
+    function closeSettings() {
+      document.getElementById('settingsTab').style.display = 'none';
+    }
+
+    function saveSettings() {
+      const siteName = document.getElementById('siteName').value;
+      document.title = siteName; // Update the site name
+      
+      closeSettings();
+    }
+
+    // JavaScript for particles animation
+    const container = document.querySelector('.par');
+    const numParticles = 100;
+
+    for (let i = 0; i < numParticles; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.top = Math.random() * 100 + 'vh';
+      particle.style.left = Math.random() * 100 + 'vw';
+      particle.style.animationDuration = (Math.random() * 5 + 1) + 's';
+      container.appendChild(particle);
+    }
+    // Blank script
+      function aboutblank() {
+        var win = window.open(); var url = 'index.html'; var iframe = win.document.createElement('iframe'); iframe.style="position:fixed;width:100vw;height:100vh;top:0px;left:0px;right:0px;bottom:0px;z-index:2147483647;background-color:white;border:none;"; iframe.src = url; win.document.body.appendChild(iframe);
+      }
+    // Panic button script
+     function panicButton() {
+     window.close();
+     window.open('https://google.com', '_blank');
+        }
+    // Themes script
+         function changeTheme(color) {
+            document.body.style.backgroundColor = `var(${color})`;
+        }
+        
+        function resetTheme() {
+            document.body.style.backgroundColor = `#082E5F`;
+        }
+  </script>
+</body></html>
